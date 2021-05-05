@@ -5,20 +5,29 @@
     <title>Kadi's Portfolio</title>
     <meta charset="utf-8">
     <meta name="viewpoint" content="width=dive-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie-edge">
-    <!--Posibilita que sea compatible con Internet Explore-->
+    <meta http-equiv="x-ua-compatible" content="ie-edge"> <!--Posibilita que sea compatible con Internet Explore-->
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="S2_N1_Styles.css" rel="stylesheet">
 
-
 </head>
+
+
+
+<!-- 
+Partint del concepte mobile first, crea el disseny de la teva web. Aquest projecte ha de tenir, mínimament:
+    #Bootstrap des de CDN i des d’arxius descarregats. La versió que no s’utilitzi ha d’estar comentada .
+    #La capçalera ha de tenir un navbar + logo i uns enllaços per a fer login/registre. 
+        ##Quan el navbar estigui en versió botó hamburguesa, les opcions de login/registre han de quedar visibles i independents.
+        ## Al clicar sobre login i registre, s’ha d’obrir una finestra modal per accedir-hi. Evidentment han de tenir diferents dades.
+    #La pàgina Home Page ha de tenir un slider de mínim 4 imatges.
+    #Usar el grid system de bootstrap per a fer que la teva web sigui responsive.-->
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">
-            <img src="img/Logo1.png" alt="page's logo">
+            <img src="img/Logo1.png" alt="logo site">
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -42,27 +51,96 @@
             </ul>
         </div>
 
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-login">Login</button>
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-sigin">Sigin</button>
-       
-        <!-- Modal -->
-<div class="modal fade" id="modal-login" tabindex="-1" aria-labelledby="modal-login" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="modal-login">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+        <!--Boton Login ----------------------------------------------------------->
+        <button type="button" class="btn btn-outline-light mrg-botones" data-bs-toggle="modal" data-bs-target="#login" >Login</button>
+
+        <!--Modal Login ------------------------------------------------------------>
+        <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login-lable" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!--Header Modal Login --------------------->
+              <div class="modal-header">
+                <h4 class="modal-title" id="login">Login</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <!--Body Modal Login ----------------------->
+              <div class="modal-body">
+              <!--Formulario datos Login-->
+                <form>
+                  <div class="mb-3">
+                    <label for="user-name" class="col-form-label">Usuario:</label>
+                    <input type="text" class="form-control" id="user-name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="password" class="col-form-label">Contraseña:</label>
+                    <input type="text" class="form-control" id="password">
+                  </div>
+                </form>
+              </div>
+
+              <!--Footer Modal Login --------------------->
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary">Entrar</button>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Login</button>
-        </div>
-      </div>
-    </div>
-  </div>
+         <!--Boton Registro ------------------------------------------------------->
+         <button type="button" class="btn btn-outline-light mrg-botones" data-bs-toggle="modal" data-bs-target="#registro">Registrate</button>
+        <!--Modal Registro -------------------------------------------------------->
+         <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="registro-lable" aria-hidden="true">
+           <div class="modal-dialog">
+             <div class="modal-content">
+
+                 <!--Header Modal Registro------->
+               <div class="modal-header">
+                 <h4 class="modal-title" id="registro">Registrate</h4>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+
+               <!--Body Modal Registro------------>
+               <div class="modal-body">
+                <!--Formulario para datos registro-->
+                 <form>
+                    <div class="mb-3">
+                        <label for="name" class="col-form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="surname" class="col-form-label">Apellidos:</label>
+                        <input type="text" class="form-control" id="surname">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="col-form-label">Correo electronico:</label>
+                        <input type="text" class="form-control" id="email">
+                      </div>
+
+                   <div class="mb-3">
+                     <label for="user" class="col-form-label">Usuario:</label>
+                     <input type="text" class="form-control" id="user">
+                   </div>
+
+                   <div class="mb-3">
+                     <label for="password" class="col-form-label">Contraseña:</label>
+                     <input type="text" class="form-control" id="password">
+                   </div>
+                 </form>
+               </div>
+
+               <!--Footer Modal Registro -------->
+               <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                 <button type="button" class="btn btn-primary">Registarte</button>
+               </div>
+             </div>
+           </div>
+         </div>
 
        
 
