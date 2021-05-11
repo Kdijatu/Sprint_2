@@ -1,6 +1,14 @@
 /*Es correcto que los cambios que quiera hacer de elementos concretos, por ejemplo los botones de login i registro los haga en mi propio css?*/
 
-
+body{
+    width: 1200px;
+    margin: auto;
+}
 .mrg-botones{
     margin:5px;
+}
+
+.carousel-item{
+    width: 100%;
+    height: auto;
 }

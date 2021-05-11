@@ -14,26 +14,25 @@
 
 
 
-<!-- 
-Partint del concepte mobile first, crea el disseny de la teva web. Aquest projecte ha de tenir, mínimament:
-    #Bootstrap des de CDN i des d’arxius descarregats. La versió que no s’utilitzi ha d’estar comentada .
-    #La capçalera ha de tenir un navbar + logo i uns enllaços per a fer login/registre. 
-        ##Quan el navbar estigui en versió botó hamburguesa, les opcions de login/registre han de quedar visibles i independents.
-        ## Al clicar sobre login i registre, s’ha d’obrir una finestra modal per accedir-hi. Evidentment han de tenir diferents dades.
-    #La pàgina Home Page ha de tenir un slider de mínim 4 imatges.
-    #Usar el grid system de bootstrap per a fer que la teva web sigui responsive.-->
+<!--<div class = "container-fluid"></div>-->
 
 <body>
-
+    
+    <!--CABECERA NAV-------------------------------------------------------------------------------------->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!--Logo-->
         <a class="navbar-brand" href="#">
             <img src="img/Logo1.png" alt="logo site">
         </a>
 
+        <!--Boton Hamburgesa-------------------->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <!--Menu Nav----------------------------->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
@@ -51,23 +50,23 @@ Partint del concepte mobile first, crea el disseny de la teva web. Aquest projec
             </ul>
         </div>
 
-        <!--Boton Login ----------------------------------------------------------->
+        <!--Boton Login ---------------------------->
         <button type="button" class="btn btn-outline-light mrg-botones" data-bs-toggle="modal" data-bs-target="#login" >Login</button>
 
-        <!--Modal Login ------------------------------------------------------------>
+        <!--Modal Login ---->
         <div class="modal fade" id="login" tabindex="-1" aria-labelledby="login-lable" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
 
-              <!--Header Modal Login --------------------->
+              <!--Header Modal Login ---->
               <div class="modal-header">
                 <h4 class="modal-title" id="login">Login</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
-              <!--Body Modal Login ----------------------->
+              <!--Body Modal Login ---->
               <div class="modal-body">
-              <!--Formulario datos Login-->
+              <!--Formulario datos Login---->
                 <form>
                   <div class="mb-3">
                     <label for="user-name" class="col-form-label">Usuario:</label>
@@ -80,7 +79,7 @@ Partint del concepte mobile first, crea el disseny de la teva web. Aquest projec
                 </form>
               </div>
 
-              <!--Footer Modal Login --------------------->
+              <!--Footer Modal Login ---->
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                 <button type="button" class="btn btn-primary">Entrar</button>
@@ -89,22 +88,22 @@ Partint del concepte mobile first, crea el disseny de la teva web. Aquest projec
           </div>
         </div>
 
-         <!--Boton Registro ------------------------------------------------------->
+         <!--Boton Registro ---------------------------------->
          <button type="button" class="btn btn-outline-light mrg-botones" data-bs-toggle="modal" data-bs-target="#registro">Registrate</button>
-        <!--Modal Registro -------------------------------------------------------->
+        <!--Modal Registro ---->
          <div class="modal fade" id="registro" tabindex="-1" aria-labelledby="registro-lable" aria-hidden="true">
            <div class="modal-dialog">
              <div class="modal-content">
 
-                 <!--Header Modal Registro------->
+                 <!--Header Modal Registro---->
                <div class="modal-header">
                  <h4 class="modal-title" id="registro">Registrate</h4>
                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
 
-               <!--Body Modal Registro------------>
+               <!--Body Modal Registro---->
                <div class="modal-body">
-                <!--Formulario para datos registro-->
+                <!--Formulario para datos registro---->
                  <form>
                     <div class="mb-3">
                         <label for="name" class="col-form-label">Nombre:</label>
@@ -133,30 +132,93 @@ Partint del concepte mobile first, crea el disseny de la teva web. Aquest projec
                  </form>
                </div>
 
-               <!--Footer Modal Registro -------->
+               <!--Footer Modal Registro ---->
                <div class="modal-footer">
                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  <button type="button" class="btn btn-primary">Registarte</button>
                </div>
              </div>
            </div>
-         </div>
-
-       
-
+         </div>    
     </nav>
 
+  
 
+    <!--CAROUSEL -->
+    <div id="slide" class="carousel slide" dat-bs-ride="carousel"> 
 
+        <!--Indicadores -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#slide" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Ibiza"></li>
+            <button type="button" data-bs-target="#slide" data-bs-slide-to="1" aria-label="Covadonga"></button>
+            <button type="button" data-bs-target="#slide" data-bs-slide-to="2" aria-label="Fuente Dé"></button>
+            <button type="button" data-bs-target="#slide" data-bs-slide-to="3" aria-label="Cudillero"></button>
+            <button type="button" data-bs-target="#slide" data-bs-slide-to="4" aria-label="Formentera"></button>
+          </div>
 
+        <!--Imagenes -->
+        <div class="carousel-inner border: red solid 5px;" >
+            <div class="carousel-item active">
+                <img src="img/Ibiza.jpg" alt="Playa de Ibiza" class="d-md-block w-100 h-100">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Ibiza</h3>
+                    <p>Islas Baleares</p>
+                </div>
+            </div>
+        
+            <div class="carousel-item">
+                <img src="img/Covadonga.jpg" alt="Lago de Covadonga" class="d-md-block w-100"> 
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Covadonga</h3>
+                    <p>Astúrias</p>
+                </div>
+            </div>
 
+            <div class="carousel-item">
+              <img src="img/Fuente De.jpg" alt="Téleferico de Funete Dé" class="d-md-block w-100"> 
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Téleferico de Funete Dé</h3>
+                  <p>Cantabria</p>
+              </div>
+            </div>
 
-    <!--  <script src="js/jquery-3.2.1.slim.min.js"></script>
+            <div class="carousel-item">
+              <img src="img/Cudillero.jpg" alt="Cudillero" class="d-md-block w-100"> 
+              <div class="carousel-caption d-none d-md-block">
+                  <h3>Cudillero</h3>
+                  <p>Astúrias</p>
+              </div>
+          </div>
+
+          <div class="carousel-item">
+            <img src="img/Formentera.jpg" alt="Playa de Formentera" class="d-md-block w-100"> 
+            <div class="carousel-caption d-none d-md-block">
+                <h3>Formentera</h3>
+                <p>Islas Baleares</p>
+            </div>
+        </div>
+        </div>
+      
+
+        <!--Controles-->
+        <button class="carousel-control-prev" type="button" data-bs-target="#slide" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#slide" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+    </div> 
+
+        <script src="js/jquery-3.2.1.slim.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
-        <script src="js/popper.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+        <script src="js/popper.min.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
 
 </body>
 
