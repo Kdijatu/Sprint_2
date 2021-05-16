@@ -1,14 +1,46 @@
-/*Es correcto que los cambios que quiera hacer de elementos concretos, por ejemplo los botones de login i registro los haga en mi propio css?*/
 
-body{
-    width: 1200px;
-    margin: auto;
+
+.logo-brand{
+    min-width: 50px;
+    max-width: 100px;
 }
 .mrg-botones{
     margin:5px;
 }
 
-.carousel-item{
-    width: 100%;
-    height: auto;
+.marco{
+    padding: 10px;
+    margin-bottom: 50px;
 }
+.envoltorio {
+    margin-top: 40px;
+}
+
+.titulo{
+    text-align: center;
+}
+
+.secciones{
+    text-align: justify;
+    padding: 20px;
+}
+.tercera-seccion{
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+
+.imgs{
+    min-width: 50px;
+    max-width: 100px;
+    display:block;
+    margin:auto;
+}
+
+.footer-text{
+    text-align:center;
+    color: grey;
+    font-size: 12px;
+}
+
+
